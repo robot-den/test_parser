@@ -12,6 +12,7 @@
               = article.title
     .col-md-4
       .well
-        = button_to "Parse", home_parse_path, class: 'btn btn-primary'
+        = button_to "Parse", home_parse_path, class: 'btn btn-primary pull-left m-r-10'
+        = button_to "Destroy all", home_destroy_path, class: 'btn btn-danger'
         h5
           = "В базе #{@count_articles} записей"
