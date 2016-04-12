@@ -1,0 +1,17 @@
+.container
+  .row
+    .page-header
+      h1 Parse like a god
+  .row
+    .col-md-8
+      .well
+        - @articles.each do |article|
+          .well-sm.well-br
+            = link_to article.url do
+              = image_tag article.image_url, height: '70', width: '70', class: 'm-r-10'
+              = article.title
+    .col-md-4
+      .well
+        = button_to "Parse", home_parse_path, class: 'btn btn-primary'
+        h5
+          = "В базе #{@count_articles} записей"
